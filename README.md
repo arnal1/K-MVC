@@ -2,6 +2,10 @@
 A Verry SImple MVC Framework for PHP
 
 
+#FITUR:
+1. Akses model menggunakan metode binding PDO, jadi aman dari SQL injection.
+2. Menggunakan driver db connection PDO;
+
 
 #template controller
 <?php
