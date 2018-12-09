@@ -1,0 +1,85 @@
+html {
+    position: relative;
+}
+
+body {
+    margin-bottom: 100px;
+    margin-top: 50px;
+    background-image: url("http://localhost/anime/public_html/assets/img/bg-content.jpg");
+    background-attachment: fixed;
+}
+
+.jumbotron {
+    background-image: url("http://localhost/anime/public_html/assets/img/bg-header.png");
+}
+
+.jumbotron h1 {
+    color: aliceblue;
+}
+
+.jumbotron p {
+    color: aliceblue;
+}
+
+section.content .konten {
+    min-height: 600px;
+    background-color: aliceblue;
+}
+
+section.content .sidebar {
+    min-height: 600px;
+    background-color: aliceblue;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    padding-top: 20px;
+}
+
+footer p {
+    color: #aaaaaa;
+    font-size: 0.9em;
+}
+
+section.content .listinfo {
+    font-size: 13px;
+    background: #F7F7F7;
+    border: 1px solid #E0DFDF;
+    border-bottom: 0;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+section.content .listinfo ul li:nth-child(odd) {
+    background: #FFF;
+}
+
+section.content .listinfo ul li:nth-child(even) {}
+
+section.content .listinfo ul li {
+    padding: 4px 10px;
+    line-height: 20px;
+    overflow: hidden;
+    border-bottom: 1px solid #E0DFDF;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #333;
+}
+
+section.content .listinfo ul li b {
+    display: block;
+    float: left;
+    width: 95px;
+    color: #333
+}
+
+section.content .listinfo ul li a {
+    color: #333
+}
+
+section.content .listinfo ul {
+    margin-left: -3em;
+}

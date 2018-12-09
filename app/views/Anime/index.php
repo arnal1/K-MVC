@@ -22,16 +22,8 @@
                             <div class="row">
                                 <div class="col-md-8">
                                     <div class="card-body">
-                                        <a href=""><h5 class="card-title"><?= $anime['judul']; ?> Episode <?= $anime['episode']; ?></h5></a>
-                                        <small class="text-muted"><strong>Posted By :</strong> Admin | <?= $anime['username']; ?></small>
-                                        <br>
-                                        <small class="text-muted"><strong>Releashed On </strong><?= tgl_lengkap($anime['waktu_rilis']); ?></small>
-                                        <br>
-                                        <a href="<?= BASEURL; ?>/anime/detail/<?= $anime['anime_id']; ?>"><small><?= $anime['judul']; ?></small></a>
+                                        <a href="<?= BASEURL; ?>/anime/detail/<?= $anime['id']; ?>"><small><?= $anime['judul']; ?></small></a>
                                     </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <img class="card-img-top" src="<?= BASEURL; ?>/data/thumbnail/<?= $anime['thumbnail']; ?>" alt="Card image cap">
                                 </div>
                             </div>
                         </div>

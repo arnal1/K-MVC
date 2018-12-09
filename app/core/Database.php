@@ -12,8 +12,8 @@ class Database {
 
     public function __construct()
     {
-        //data name source
-        $dns = 'mysql:host='.$this->host.';dbname='.$this->db_name;
+        //data source name
+        $dsn = 'mysql:host='.$this->host.';dbname='.$this->db_name;
 
         $option = [
             PDO::ATTR_PERSISTENT => true,
@@ -21,7 +21,7 @@ class Database {
         ];
 
         try {
-            $this->dbh = new PDO($dns, $this->user, $this->pass, $option);
+            $this->dbh = new PDO($dsn, $this->user, $this->pass, $option);
         } catch(PDOExeption $e) {
             die($e->getMessage());
         }
@@ -49,6 +49,7 @@ class Database {
                     $type = PDO::PARAM_STR;
             }
         }
+        $this->stmt->bindValue($param, $value, $type);
     }
 
     public function execute()
@@ -66,5 +67,10 @@ class Database {
     {
         $this->execute();
         return $this->stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    public function rowCount()
+    {
+        return $this->stmt->rowCount();
     }
 }
